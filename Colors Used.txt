@@ -1,0 +1,10 @@
+background of logo: 	#351C4D
+letter P:		#F5ABB9	
+letter R:		#FEB47B
+letter I:		#FF7E5F
+
+tshirt
+Mug 
+Cup
+Pillows 
+Bag 

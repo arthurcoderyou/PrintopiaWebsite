@@ -1,0 +1,80 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: helvetica;
+	
+}
+#intro{
+	/*
+	background-image: url('img/Printopia Logo.png');
+	background-attachment: fixed;
+	background-repeat:no-repeat ;
+	background-size: 100%;
+	*/
+	background-color:hsl(0, 0%, 0%, 0.8)	;
+	
+	color:white;
+}
+#intro .jumbotron{
+	background-color:hsl(0, 0%, 0%, 0.1)	;
+}
+html,#cap_sec,#cup_sec,#mug_sec,#pillow_sec,#tote_bag_sec,#shirt_sec{
+	background-color:#fff	;
+}
+/*content of the jumborton*/
+#cap_sec .jumbotron,#cup_sec .jumbotron,#mug_sec .jumbotron,#pillow_sec .jumbotron,#tote_bag_sec .jumbotron,#shirt_sec .jumbotron{
+	background-color:hsl(0, 0%, 0%, 0.04)	;
+	color: white;
+}
+#cap_sec .page-header,#cup_sec .page-header,#mug_sec .page-header,#pillow_sec .page-header,#tote_bag_sec .page-header,#shirt_sec .page-header{
+	color:black;
+}
+#cap_sec h3,#cup_sec h3,#mug_sec h3,#pillow_sec h3,#tote_bag_sec h3,#shirt_sec h3,h6{
+	color:black;
+}
+
+
+.btn-sm{
+
+}
+
+.container-fluid{
+	background-color: hsl(271, 47%, 21%,0.5)	;
+}
+.nav-item{
+	padding-left: 30px;
+}
+.card:hover{
+	animation-name: box;
+	animation-duration: 0.5s;
+	animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+	animation-fill-mode: both;
+}
+
+/*modal*/
+#md .modal-content{
+	color: white;
+	background-color: hsl(0, 0%, 0%,0.8);
+}
+
+#cart .modal-content{
+	color: white;
+	background-color: hsl(0, 0%, 0%,0.8);
+}
+
+#login .modal-content{
+	color: white;
+	background-color: rgba(9, 164, 236, 0.3);
+}
+
+
+
+/*animation for the box-shadow*/
+@keyframes box{
+	0%{
+
+	}
+	100%{
+  	box-shadow: 5px 5px 3px #888888;
+	}
+}

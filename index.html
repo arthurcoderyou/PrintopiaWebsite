@@ -1,0 +1,2553 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!--Setting the view port to make the website look good on all devices-->
+	<meta name="keywords" content="Printopia">
+  <meta name="author" content="Arthur Cervania BSIT II B">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Refresh the document every 30 seconds
+	<meta http-equiv="refresh" content="30">
+	-->
+	
+	<title>Printopia</title>
+
+	<!--
+		Group Members
+
+		Beverly Dela Cruz
+
+		Eunique A. Javillo
+
+		Glenda Paña Mendoza
+		
+		James Tercenio
+		
+		John Riemyl Catubay
+		
+		Juliana Orpilla Santander
+
+		Katrina Rose Iba-oc
+
+		Leo Bustillo
+
+		Milane Batan
+
+
+	-->
+
+
+	<!--Icon-->
+	<link rel="icon" type="image/x-icon" href="Images/Logo.jpg">
+
+	<!--Design-->
+	<link rel="stylesheet" type="text/css" href="design.css">
+
+	<!--External CDN-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+		<style>
+			
+			.reveal {
+				position: relative;
+				opacity: 0;
+			}
+
+			.reveal.active {
+				opacity: 1;
+			}
+			.active.fade-bottom {
+				animation: fade-bottom 1s ease-in;
+			}
+			.active.fade-left {
+				animation: fade-left 1s ease-in;
+			}
+			.active.fade-right {
+				animation: fade-right 1s ease-in;
+			}
+
+
+			/*animations*/
+			@keyframes fade-bottom {
+				0% {
+					transform: translateY(50px);
+					opacity: 0;
+				}
+				100% {
+					transform: translateY(0);
+					opacity: 1;
+				}
+			}
+			@keyframes fade-left {
+				0% {
+					transform: translateX(-100px);
+					opacity: 0;
+				}
+				100% {
+					transform: translateX(0);
+					opacity: 1;
+				}
+			}
+
+			@keyframes fade-right {
+				0% {
+					transform: translateX(100px);
+					opacity: 0;
+				}
+				100% {
+					transform: translateX(0);
+					opacity: 1;
+				}
+			}
+
+
+
+		</style>
+</head>
+<body>
+<!--Start of the Header
+<header class="" id="home">
+		
+	<small class="pl-3" style="font-weight:bold;">arthurcervania@gmail.com</small>
+	</header>
+End of the Header-->
+<header id="home"></header>
+
+<!--Navigation bar-->
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top ">
+		<!--The logo will remain even if the toggler is there-->
+		<a href="#" class="navbar-brand" >
+			<img src="Images/L.png" alt="website logo" width="100px">
+		</a>  
+
+		<!--button with class navbar-toggler and data-toggle="collapse" and data-target="the container id"-->
+		<!--take note that if the data target is not working , maybe you have not inserted the # sign before the id name-->
+
+		<!--To hide the links and make the navbar look like with  a toggler at any size, remove the navbar-expand-navbarsize on the nav class
+			just like on what you will do to make the link always align vertical
+		-->
+		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navc">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!--this is the collapsible navbar-->
+		<!--div with the .collapse and navbar-collapse and id navc-->
+		<div class="collapse navbar-collapse justify-content-end" id="navc">
+			<ul class="navbar-nav ">
+				<li class="nav-item ">
+					<a href="#home" class="nav-link">Home</a>
+				</li>
+				
+				<!--navbar with dropdown-->
+
+				<li class="nav-item  dropdown ">
+					<a href="#dm" class="nav-link dropdown-toggle" data-toggle="dropdown">Categories</a>
+					<div class="dropdown-menu" id="dm">
+						<a href="#cap_sec" class="dropdown-item">Cap</a>
+						<div class="dropdown-divider"></div>
+						<a href="#cup_sec" class="dropdown-item">Cup</a>
+						<div class="dropdown-divider"></div>
+						<a href="#mug_sec" class="dropdown-item">Mug</a>
+						<div class="dropdown-divider"></div>
+						<a href="#pillow_sec" class="dropdown-item">Pillows</a>
+						<div class="dropdown-divider"></div>
+						<a href="#tote_bag_sec" class="dropdown-item">Tote Bag</a>
+						<div class="dropdown-divider"></div>
+						<a href="#shirt_sec" class="dropdown-item">T-shirt</a>
+						
+					</div>
+				</li>
+
+				<li class="nav-item ">
+					<a href="#about" class="nav-link">About</a>
+				</li>
+
+				<li class="nav-item">
+					<a href="#login" data-toggle="modal" class="nav-link text-success">Login</a>
+				</li>
+				<li class="nav-item">
+					<a href="#cart" data-toggle="modal" class="nav-link text-success ">&#128722;</a>
+				</li>
+				<li class="nav-item">
+					
+				</li>
+				
+				<!--End of Form inside the navbar-->
+
+			</ul>
+			<form action="#" class="form-inline">
+				<div class="input-group ">
+					<!--You can use the input-group-prepend (before the input) or input-group-append (after the input) to attach an icon of help next to the input feild-->
+					<div class="input-group-prepend">
+						<span class="input-group-text">&#x1F50E;</span>
+					</div>
+					<input type="search" class="form-control" placeholder="Search" onsearch="myFunction()">
+				</div>
+			</form>
+		</div>
+		
+	</nav>
+
+<!--end of Navigation bar-->
+
+<!--body-->
+
+	<!--Carousel-->
+		<div id="d" class="carousel slide" data-ride="carousel" data-interval="3000" data-pause="hover" data-keyboard="true" data-wrap="true">
+			<!--Indicators-->
+			<!--.carousel-indicators adds indicators for the carousel-->
+			<!--These are the little dots at the bottom of each slide 
+				the little rectangles indicating how many slides are there and which slide is currently viewing
+			-->
+			<ul class="carousel-indicators">
+				<!--i think, the data-slide-to is used to control what is next in the automatic slide-->
+				<!--data-slide and data-slide-to attributes specifies which slide to go-->
+				<li data-target="#d" data-slide-to="0" class="active"></li>
+				<li data-target="#d" data-slide-to="1" class="active"></li>
+				<li data-target="#d" data-slide-to="2" class="active"></li>
+			</ul>
+
+			<!--Slideshow-->
+			<!--.carousel-inner Add slides to the carousel-->
+			<div class="carousel-inner" >
+
+				<!--.carousel-item specifies the content of each slide -->
+				<!--to change the size of the carousel successively, change the style="hight:value;" of each wrapping content that have .carousel-item and remember to put the same height on each -->
+				<div class="carousel-item active" style="height: auto;">
+
+					<!--Video embedded intstead of image to the carousel-->
+					<video class="img-fluid" autoplay muted loop>
+						<source src="car1.mp4" type="video/mp4">
+						
+						Your browser does not support the video tag.
+					</video>
+					<!--end of Video-->
+
+					<!--.carousel-caption is used to create a caption inside the slideshow					<div class="carousel-caption" >
+						
+					</div>
+				-->
+
+				</div>
+
+
+				<div class="carousel-item" style="height: auto;">
+
+					<!--Video embedded intstead of image to the carousel-->
+					<video class="img-fluid" autoplay muted loop>
+						<source src="car2.mp4" type="video/mp4">
+						
+						Your browser does not support the video tag.
+					</video>
+					<!--end of Video-->
+
+					<!--.carousel-caption is used to create a caption inside the slideshow
+					<div class="carousel-caption" >
+						
+					</div>
+					-->
+
+				</div>
+
+				<div class="carousel-item" style="height: auto;">
+
+					<!--Video embedded intstead of image to the carousel-->
+					<video class="img-fluid" autoplay muted loop>
+						<source src="car3.mp4" type="video/mp4">
+						
+						Your browser does not support the video tag.
+					</video>
+					<!--end of Video-->
+
+					<!--.carousel-caption is used to create a caption inside the slideshow
+					<div class="carousel-caption" >
+						
+					</div>
+					-->
+				</div>
+
+				
+			</div>
+
+			<!--Left and Right controls-->
+			<!--.carousel-control-prev adds a left (previuos) button to the carousel which allows the user to go back between the slides-->
+			<a href="#d" class="carousel-control-prev" data-slide="prev">
+				<!--.carousel-control-prev-icon is used inside .carousel-control-prev to show the prev icon-->
+				<span class="carousel-control-prev-icon"></span>
+			</a>
+
+			<!--.carousel-control-prev adds a right (next) button to the carousel which allows the user to go back between the slides-->
+			<a href="#d" class="carousel-control-next" data-slide="next">
+				<!--.carousel-control-next-icon is used inside .carousel-control-next to show next icon-->
+				<span class="carousel-control-next-icon"></span>
+			</a>
+		</div>
+	<!--end of Carousel-->
+
+
+
+	<!--Intro-->
+	<div class="container-fluid pt-5 pb-5 " id="intro">
+		<div class="jumbotron">
+			<h1 class="display-3 page-header reveal fade-left">Printopia</h1>
+			<p class="p-5 text-justify reveal fade-bottom">Our company offers premium quality and comfortable products in the market.
+				Breathable and comfortable with a premium feel, our collection
+				of 100% Polyester T – shirts come in a range of designs, colors and sizes
+				so we are certain you will find the perfect one for you. Ideal
+				for embroidery and print in particular, allowing you to add your
+				own personalization. We also offer quality Cup and Mug Printing,
+				Cap Printing, Pillows/Pillow Case Printing, and Tote Bag Printing.
+				
+				Our company’s products and services will assure you the best quality
+				
+				printing in the market with an affordable price.</p>
+			<h2 class="display-3 reveal fade-left"><span style="color: aqua;">Special</span> Promos</h2>
+			<div class="row">
+				<div class="col p-5 reveal fade-bottom">
+					<img class="img-fluid" alt="promo" src="img/ppd.jpg" style="width: 100%; height:auto;">
+				</div>
+				<div class="col p-5 reveal fade-bottom">
+					<section>
+						<h3 class="display-3 reveal fade-left" ><span style="color: aqua;">Printopia</span>  Best Offers</h3>
+
+						<ul class="list-group">
+							<li class="list-item display-3 reveal fade-right"><small style="color: #FF7E5F;">Buy <span style="color: aqua;">12</span> Get <span style="color: aqua;">1</span> Free</small> </li>
+							<li class="list-item display-3 reveal fade-right"><small style="color: #FF7E5F;">Buy <span style="color: aqua;">as</span> Low <span style="color: aqua;">as</span> <span class="text-warning">P 150</span></small></li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		
+		</div>
+
+	
+		
+	</div>
+
+	<!--End of Intro-->
+
+
+
+
+	<!--Cap Section-->
+	<div id="cap_sec" class="container-fluid p-5" onscroll="scrollefc()">
+		<div class="jumbotron text-center p-4">
+
+      <h1 class="page-header pb-4 display-1 reveal fade-bottom">Caps</h1>
+
+			<!--Column 1 -->
+			<div class="card-columns" >
+				<!--Cap 1-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cap/Cap 1.jpg" alt="Anime Girl" class="card-img-top cc1">
+					<div class="card-body card-img-overlay" >
+						<h3 class="card-title display-4 cc1" >Design 1</h3>
+						<h6 class="design_by cc1">Designed by <strong>Eunique Javillo</strong></h6>
+						<a href="#md" class="stretched-link text-white" data-toggle="modal" id="cc1"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cap 1-->
+
+
+				<!--Cap 2-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cap/Cap 2.jpg" alt="Anime Girl" class="card-img-top cc2">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 cc2" >Design 2</h3>
+						<h6 class="design_by cc2">Designed by <strong>Beverly Dela Cruz</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="cc2" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cap 2-->
+
+				<!--Cap 3-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cap/Cap 3.jpg" alt="Anime Girl" class="card-img-top cc3">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 cc3" >Design 3</h3>
+						<h6 class="design_by cc3">Designed by <strong>Glenda Paña Mendoza</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="cc3" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cap 3-->
+			</div>
+			<!--end of Column 1-->
+
+			<!--Column 2-->
+			<div class="card-columns">
+				<!--Cap 4-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cap/Cap 4.jpg" alt="Anime Girl" class="card-img-top cc4">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 cc4" >Design 4</h3>
+						<h6 class="design_by cc4">Designed by <strong>James Tercenio</strong></h6>
+						<a href="#md" class="stretched-link text-white" data-toggle="modal" id="cc4"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cap 4-->
+
+				<!--Cap 5-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cap/Cap 5.jpg" alt="Anime Girl" class="card-img-top cc5">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 cc5" >Design 5</h3>
+						<h6 class="design_by cc5">Designed by <strong>John Riemyl Catubay</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="cc5" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cap 5-->
+
+				<!--Cap 6-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cap/Cap 6.jpg" alt="Anime Girl" class="card-img-top cc6">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 cc6" >Design 6</h3>
+						<h6 class="design_by cc6">Designed by <strong>Juliana Orpilla Santander</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="cc6" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cap 6-->
+
+
+			</div>
+			<!--end of Column 2-->
+
+
+			<!--Column 3-->
+			<div class="card-columns">
+				<!--Cap 7-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cap/Cap 7.jpg" alt="Anime Girl" class="card-img-top cc7">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 cc7" >Design 7</h3>
+						<h6 class="design_by cc7">Designed by <strong>Katrina Rose Iba-oc</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="cc7" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cap 8-->
+
+				<!--Cap 5-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cap/Cap 8.jpg" alt="Anime Girl" class="card-img-top cc8">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 cc8" >Design 8</h3>
+						<h6 class="design_by cc8">Designed by <strong>Leo Bustillo</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="cc8" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cap 8-->
+
+				<!--Cap 9-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cap/Cap 9.jpg" alt="Anime Girl" class="card-img-top cc9">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 cc9" >Design 9</h3>
+						<h6 class="design_by cc9">Designed by <strong>Milane Batan</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="cc9" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cap 9-->
+
+
+			</div>
+			<!--end of Column 3-->
+
+			<!--Column 4-->
+			<div class="card-columns">
+				<!--Cap 10-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cap/Cap 10.jpg" alt="Anime Girl" class="card-img-top cc10">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 cc10" >Design 10</h3>
+						<h6 class="design_by cc10">Designed by <strong>Katrina Rose Iba-oc</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="cc10" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cap 10-->
+
+				<!--Cap 11-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cap/Cap 11.jpg" alt="Anime Girl" class="card-img-top cc11">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 cc11" >Design 11</h3>
+						<h6 class="design_by cc11">Designed by <strong>Leo Bustillo</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="cc11" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cap 11-->
+
+				<!--Cap 12-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cap/Cap 12.jpg" alt="Anime Girl" class="card-img-top cc12">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 cc12" >Design 12</h3>
+						<h6 class="design_by cc12">Designed by <strong>Milane Batan</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="cc12" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cap 12-->
+
+
+			</div>
+			<!--end of Column 4-->
+
+			<div class="card-columns">
+				<!--Cap 13-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cap/Cap 13.jpg" alt="Anime Girl" class="card-img-top cc13">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 cc13" >Design 13</h3>
+						<h6 class="design_by cc13">Designed by <strong>Milane Batan</strong></h6>
+						<a href="#md" class="stretched-link text-white cc13" id="cc13" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cap 13-->
+			</div>
+
+
+    </div>
+	</div>
+	<!--end of Cap Section-->
+
+
+
+
+
+
+
+
+
+
+
+	<!--Cup Section-->
+	<div id="cup_sec" class="container-fluid p-5">
+		<div class="jumbotron text-center p-4">
+
+      <h1 class="page-header pb-4 display-1 reveal fade-bottom">Cups</h1>
+
+			<!--Column 1 -->
+			<div class="card-columns" >
+				<!--Cup 1-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cup/Cup 1.jpg" alt="Anime Girl" class="card-img-top ca1">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 ca1" >Design 1</h3>
+						<h6 class="design_by ca1">Designed by <strong>Eunique Javillo</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="ca1" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cup 1-->
+
+
+				<!--Cup 2-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cup/Cup 2.jpg" alt="Anime Girl" class="card-img-top ca2">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 ca2" >Design 2</h3>
+						<h6 class="design_by ca2">Designed by <strong>Beverly Dela Cruz</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="ca2" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cup 2-->
+
+				<!--Cup 3-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cup/Cup 3.jpg" alt="Anime Girl" class="card-img-top ca3" >
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 ca3" >Design 3</h3>
+						<h6 class="design_by ca3">Designed by <strong>Glenda Paña Mendoza</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="ca3" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cup 3-->
+			</div>
+			<!--end of Column 1-->
+
+			<!--Column 2-->
+			<div class="card-columns">
+				<!--Cap 4-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cup/Cup 4.jpg" alt="Anime Girl" class="card-img-top ca4">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 ca4" >Design 4</h3>
+						<h6 class="design_by ca4">Designed by <strong>James Tercenio</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="ca4" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cup 4-->
+
+				<!--Cup 5-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cup/Cup 5.jpg" alt="Anime Girl" class="card-img-top ca5">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 ca5" >Design 5</h3>
+						<h6 class="design_by ca5">Designed by <strong>John Riemyl Catubay</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="ca5" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cup 5-->
+
+				<!--Cup 6-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cup/Cup 6.jpg" alt="Anime Girl" class="card-img-top ca6">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 ca6" >Design 6</h3>
+						<h6 class="design_by ca6">Designed by <strong>Juliana Orpilla Santander</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="ca6" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cup 6-->
+
+
+			</div>
+			<!--end of Column 2-->
+
+
+			<!--Column 3-->
+			<div class="card-columns">
+				<!--Cup 7-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cup/Cup 7.jpg" alt="Anime Girl" class="card-img-top ca7">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 ca7" >Design 7</h3>
+						<h6 class="design_by ca7">Designed by <strong>Katrina Rose Iba-oc</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="ca7" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cup 7-->
+
+				<!--Cup 8-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cup/Cup 8.jpg" alt="Anime Girl" class="card-img-top ca8">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 ca8" >Design 8</h3>
+						<h6 class="design_by ca8">Designed by <strong>Leo Bustillo</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="ca8" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cup 8-->
+
+				<!--Cup 9-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cup/Cup 9.jpg" alt="Anime Girl" class="card-img-top ca9">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 ca9" >Design 9</h3>
+						<h6 class="design_by ca9">Designed by <strong>Milane Batan</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="ca9" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cup 9-->
+
+
+			</div>
+			<!--end of Column 3-->
+
+			<!--Column 4-->
+			<div class="card-columns">
+				<!--Cup 10-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cup/Cup 10.jpg" alt="Anime Girl" class="card-img-top ca10">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 ca10" >Design 10</h3>
+						<h6 class="design_by ca10">Designed by <strong>Katrina Rose Iba-oc</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="ca10" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cup 10-->
+
+				<!--Cup 11-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cup/Cup 11.jpg" alt="Anime Girl" class="card-img-top ca11">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 ca11" >Design 11</h3>
+						<h6 class="design_by ca11">Designed by <strong>Leo Bustillo</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="ca11" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cup 11-->
+
+				<!--Cup 12-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cup/Cup 12.jpg" alt="Anime Girl" class="card-img-top ca12">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 ca12" >Design 12</h3>
+						<h6 class="design_by ca12">Designed by <strong>Milane Batan</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="ca12" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cup 12-->
+
+
+			</div>
+			<!--end of Column 4-->
+
+			<div class="card-columns">
+				<!--Cup 13-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/cup/Cup 13.jpg" alt="Anime Girl" class="card-img-top ca13">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 ca13" >Design 13</h3>
+						<h6 class="design_by ca13">Designed by <strong>Milane Batan</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="ca13" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Cup 13-->
+			</div>
+
+
+    </div>
+	</div>
+	<!--end of Cup Section-->
+
+
+
+
+
+
+
+
+
+
+
+	<!--Mug Section-->
+	<div id="mug_sec" class="container-fluid p-5">
+		<div class="jumbotron text-center p-4">
+
+      <h1 class="page-header pb-4 display-1 reveal fade-bottom">Mugs</h1>
+
+			<!--Column 1 -->
+			<div class="card-columns" >
+				<!--Mug 1-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/mug/Mug 1.jpg" alt="Anime Girl" class="card-img-top mu1">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 mu1" >Design 1</h3>
+						<h6 class="design_by mu1">Designed by <strong>Eunique Javillo</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="mu1" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Mug 1-->
+
+
+				<!--Mug 2-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/mug/Mug 2.jpg" alt="Anime Girl" class="card-img-top mu2">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 mu2" >Design 2</h3>
+						<h6 class="design_by mu2">Designed by <strong>Beverly Dela Cruz</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="mu2" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Mug 2-->
+
+				<!--Mug 3-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/mug/Mug 3.jpg" alt="Anime Girl" class="card-img-top mu3">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 mu3" >Design 3</h3>
+						<h6 class="design_by mu3">Designed by <strong>Glenda Paña Mendoza</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="mu3" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Mug 3-->
+			</div>
+			<!--end of Column 1-->
+
+			<!--Column 2-->
+			<div class="card-columns">
+				<!--Mug 4-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/mug/Mug 4.jpg" alt="Anime Girl" class="card-img-top mu4">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 mu4" >Design 4</h3>
+						<h6 class="design_by mu4">Designed by <strong>James Tercenio</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="mu4" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Mug 4-->
+
+				<!--Mug 5-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/mug/Mug 5.jpg" alt="Anime Girl" class="card-img-top mu5">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 mu5" >Design 5</h3>
+						<h6 class="design_by mu5">Designed by <strong>John Riemyl Catubay</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="mu5" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Mug 5-->
+
+				<!--Mug 6-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/mug/Mug 6.jpg" alt="Anime Girl" class="card-img-top mu6">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 mu6" >Design 6</h3>
+						<h6 class="design_by mu6">Designed by <strong>Juliana Orpilla Santander</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="mu6" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Mug 6-->
+
+
+			</div>
+			<!--end of Column 2-->
+
+
+			<!--Column 3-->
+			<div class="card-columns">
+				<!--Mug 7-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/mug/Mug 7.jpg" alt="Anime Girl" class="card-img-top mu7">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 mu7" >Design 7</h3>
+						<h6 class="design_by mu7">Designed by <strong>Katrina Rose Iba-oc</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="mu7" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Mug 7-->
+
+				<!--Mug 8-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/mug/Mug 8.jpg" alt="Anime Girl" class="card-img-top mu8">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 mu8" >Design 8</h3>
+						<h6 class="design_by mu8">Designed by <strong>Leo Bustillo</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="mu8" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Mug 8-->
+
+				<!--Mug 9-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/mug/Mug 9.jpg" alt="Anime Girl" class="card-img-top mu9">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 mu9" >Design 9</h3>
+						<h6 class="design_by mu9">Designed by <strong>Milane Batan</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="mu9" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Mug 9-->
+
+
+			</div>
+			<!--end of Column 3-->
+
+			<!--Column 4-->
+			<div class="card-columns">
+				<!--Mug 10-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/mug/Mug 10.jpg" alt="Anime Girl" class="card-img-top mu10">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 mu10" >Design 10</h3>
+						<h6 class="design_by mu10">Designed by <strong>Katrina Rose Iba-oc</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="mu10" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Mug 10-->
+
+				<!--Mug 11-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/mug/Mug 11.jpg" alt="Anime Girl" class="card-img-top mu11">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 mu11" >Design 11</h3>
+						<h6 class="design_by mu11">Designed by <strong>Leo Bustillo</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="mu11" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Mug 11-->
+
+				<!--Mug 12-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/mug/Mug 12.jpg" alt="Anime Girl" class="card-img-top mu12">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 mu12" >Design 12</h3>
+						<h6 class="design_by mu12">Designed by <strong>Milane Batan</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="mu12" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-fooer"></div>
+					-->
+					
+				</div>
+				<!--end of Mug 12-->
+
+
+			</div>
+			<!--end of Column 4-->
+
+			<div class="card-columns">
+				<!--Mug 13-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/mug/Mug 13.jpg" alt="Anime Girl" class="card-img-top mu13">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 mu13" >Design 13</h3>
+						<h6 class="design_by mu13">Designed by <strong>Milane Batan</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="mu13" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Mug 13-->
+			</div>
+
+
+    </div>
+	</div>
+	<!--End of Mug Section-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--Pillows Section-->
+	<div id="pillow_sec" class="container-fluid p-5">
+		<div class="jumbotron text-center p-4">
+
+      <h1 class="page-header pb-4 display-1 reveal fade-bottom">Pillows</h1>
+
+			<!--Column 1 -->
+			<div class="card-columns" >
+				<!--Pillow 1-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/pillow/Pillow 1.jpg" alt="Anime Girl" class="card-img-top pi1">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 pi1" >Design 1</h3>
+						<h6 class="design_by pi1">Designed by <strong>Eunique Javillo</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="pi1" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Pillow 1-->
+
+
+				<!--Pillow 2-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/pillow/Pillow 2.jpg" alt="Anime Girl" class="card-img-top pi2">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 pi2" >Design 2</h3>
+						<h6 class="design_by pi2">Designed by <strong>Beverly Dela Cruz</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="pi2" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Pillow 2-->
+
+				<!--Pillow 3-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/pillow/Pillow 3.jpg" alt="Anime Girl" class="card-img-top pi3">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 pi3" >Design 3</h3>
+						<h6 class="design_by pi3">Designed by <strong>Glenda Paña Mendoza</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="pi3" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Pillow 3-->
+			</div>
+			<!--end of Column 1-->
+
+			<!--Column 2-->
+			<div class="card-columns">
+				<!--Pillow 4-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/pillow/Pillow 4.jpg" alt="Anime Girl" class="card-img-top pi4">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 pi4" >Design 4</h3>
+						<h6 class="design_by pi4">Designed by <strong>James Tercenio</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="pi4" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Pillow 4-->
+
+				<!--Pillow 5-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/pillow/Pillow 5.jpg" alt="Anime Girl" class="card-img-top pi5">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 pi5" >Design 5</h3>
+						<h6 class="design_by pi5">Designed by <strong>John Riemyl Catubay</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="pi5" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Pillow 5-->
+
+				<!--Pillow 6-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/pillow/Pillow 6.jpg" alt="Anime Girl" class="card-img-top pi6">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 pi6" >Design 6</h3>
+						<h6 class="design_by pi6">Designed by <strong>Juliana Orpilla Santander</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="pi6" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Pillow 6-->
+
+
+			</div>
+			<!--end of Column 2-->
+
+
+			<!--Column 3-->
+			<div class="card-columns">
+				<!--Pillow 7-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/pillow/Pillow 7.jpg" alt="Anime Girl" class="card-img-top pi7">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 pi7" >Design 7</h3>
+						<h6 class="design_by pi7">Designed by <strong>Katrina Rose Iba-oc</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="pi7" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Pillow 7-->
+
+				<!--Pillow 8-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/pillow/Pillow 8.jpg" alt="Anime Girl" class="card-img-top pi8">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 pi8" >Design 8</h3>
+						<h6 class="design_by pi8">Designed by <strong>Leo Bustillo</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="pi8" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Pillow 8-->
+
+				<!--Pillow 9-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/pillow/Pillow 9.jpg" alt="Anime Girl" class="card-img-top pi9">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 pi9" >Design 9</h3>
+						<h6 class="design_by pi9">Designed by <strong>Milane Batan</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="pi9" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Pillow 9-->
+
+
+			</div>
+			<!--end of Column 3-->
+
+			<!--Column 4-->
+			<div class="card-columns">
+				<!--Pillow 10-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/pillow/Pillow 10.jpg" alt="Anime Girl" class="card-img-top pi10">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 pi10" >Design 10</h3>
+						<h6 class="design_by pi10">Designed by <strong>Katrina Rose Iba-oc</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="pi10" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Pillow 10-->
+
+				<!--Pillow 11-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/pillow/Pillow 11.jpg" alt="Anime Girl" class="card-img-top pi11">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 pi11" >Design 11</h3>
+						<h6 class="design_by pi11">Designed by <strong>Leo Bustillo</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="pi11" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Pillow 11-->
+
+				<!--Pillow 12-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/pillow/Pillow 12.jpg" alt="Anime Girl" class="card-img-top pi12">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 pi12" >Design 12</h3>
+						<h6 class="design_by pi12">Designed by <strong>Milane Batan</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="pi12" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-fooer"></div>
+					-->
+					
+				</div>
+				<!--end of Pillow 12-->
+
+
+			</div>
+			<!--end of Column 4-->
+
+			<div class="card-columns">
+				<!--Pillow 13-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/pillow/Pillow 13.jpg" alt="Anime Girl" class="card-img-top pi13">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 pi13" >Design 13</h3>
+						<h6 class="design_by pi13">Designed by <strong>Milane Batan</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="pi13" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Pillow 13-->
+			</div>
+
+
+    </div>
+	</div>
+	<!--End of Pillows Section-->
+
+
+
+
+
+
+
+
+
+	<!--Tote Bag-->
+	<div id="tote_bag_sec" class="container-fluid p-5">
+		<div class="jumbotron text-center p-4">
+
+      <h1 class="page-header pb-4 display-1 reveal fade-bottom">Tote Bags</h1>
+
+			<!--Column 1 -->
+			<div class="card-columns" >
+				<!--Tote Bag 1-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tote bag/Tote Bag 1.jpg" alt="Anime Girl" class="card-img-top to1">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 to1" >Design 1</h3>
+						<h6 class="design_by to1">Designed by <strong>Eunique Javillo</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="to1" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tote Bag 1-->
+
+
+				<!--Tote Bag 2-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tote bag/Tote Bag 2.jpg" alt="Anime Girl" class="card-img-top to2">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 to2" >Design 2</h3>
+						<h6 class="design_by to2">Designed by <strong>Beverly Dela Cruz</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="to2" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tote Bag 2-->
+
+				<!--Tote Bag 3-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tote bag/Tote Bag 3.jpg" alt="Anime Girl" class="card-img-top to3">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 to3" >Design 3</h3>
+						<h6 class="design_by to3">Designed by <strong>Glenda Paña Mendoza</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="to3" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tote Bag 3-->
+			</div>
+			<!--end of Column 1-->
+
+			<!--Column 2-->
+			<div class="card-columns">
+				<!--Tote Bag 4-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tote bag/Tote Bag 4.jpg" alt="Anime Girl" class="card-img-top to4" >
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 to4" >Design 4</h3>
+						<h6 class="design_by to4">Designed by <strong>James Tercenio</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="to4" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tote Bag 4-->
+
+				<!--Tote Bag 5-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tote bag/Tote Bag 5.jpg" alt="Anime Girl" class="card-img-top to5">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 to5" >Design 5</h3>
+						<h6 class="design_by to5">Designed by <strong>John Riemyl Catubay</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="to5" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tote Bag 5-->
+
+				<!--Tote Bag 6-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tote bag/Tote Bag 6.jpg" alt="Anime Girl" class="card-img-top to6">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 to6" >Design 6</h3>
+						<h6 class="design_by to6">Designed by <strong>Juliana Orpilla Santander</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="to6" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tote Bag 6-->
+
+
+			</div>
+			<!--end of Column 2-->
+
+
+			<!--Column 3-->
+			<div class="card-columns">
+				<!--Tote Bag 7-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tote bag/Tote Bag 7.jpg" alt="Anime Girl" class="card-img-top to7">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 to7" >Design 7</h3>
+						<h6 class="design_by to7">Designed by <strong>Katrina Rose Iba-oc</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="to7" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tote Bag 7-->
+
+				<!--Tote Bag 8-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tote bag/Tote Bag 8.jpg" alt="Anime Girl" class="card-img-top to8">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 to8" >Design 8</h3>
+						<h6 class="design_by to8">Designed by <strong>Leo Bustillo</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="to8" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tote Bag 8-->
+
+				<!--Tote Bag 9-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tote bag/Tote Bag 9.jpg" alt="Anime Girl" class="card-img-top to9">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 to9" >Design 9</h3>
+						<h6 class="design_by to9">Designed by <strong>Milane Batan</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="to9" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tote Bag 9-->
+
+
+			</div>
+			<!--end of Column 3-->
+
+			<!--Column 4-->
+			<div class="card-columns">
+				<!--Tote Bag 10-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tote bag/Tote Bag 10.jpg" alt="Anime Girl" class="card-img-top to10">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 to10" >Design 10</h3>
+						<h6 class="design_by to10">Designed by <strong>Katrina Rose Iba-oc</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="to10" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tote Bag 10-->
+
+				<!--Tote Bag 11-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tote bag/Tote Bag 11.jpg" alt="Anime Girl" class="card-img-top to11">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 to11" >Design 11</h3>
+						<h6 class="design_by to11">Designed by <strong>Leo Bustillo</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="to11" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tote Bag 11-->
+
+				<!--Tote Bag 12-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tote bag/Tote Bag 12.jpg" alt="Anime Girl" class="card-img-top to12">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 to12" >Design 12</h3>
+						<h6 class="design_by to12">Designed by <strong>Milane Batan</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="to12" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-fooer"></div>
+					-->
+					
+				</div>
+				<!--end of Tote Bag 12-->
+
+
+			</div>
+			<!--end of Column 4-->
+
+			<div class="card-columns">
+				<!--Tote Bag 13-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tote bag/Tote Bag 13.jpg" alt="Anime Girl" class="card-img-top to13">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 to13" >Design 13</h3>
+						<h6 class="design_by to13">Designed by <strong>Milane Batan</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="to13" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tote Bag 13-->
+			</div>
+
+
+    </div>
+	</div>
+
+	<!--end of Tote Bag-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--Shirt-->
+	<div id="shirt_sec" class="container-fluid p-5">
+		<div class="jumbotron text-center p-4">
+
+      <h1 class="page-header pb-4 display-1 reveal fade-bottom">Shirts</h1>
+
+			<!--Column 1 -->
+			<div class="card-columns" >
+				<!--Tshirt 1-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tshirt/T-shirt 1.jpg" alt="Anime Girl" class="card-img-top s1">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 s1" >Design 1</h3>
+						<h6 class="design_by s1">Designed by <strong>Eunique Javillo</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="s1" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--Tshirt 1-->
+
+
+				<!--Tshirt 2-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tshirt/T-shirt 2.jpg" alt="Anime Girl" class="card-img-top s2">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 s2" >Design 2</h3>
+						<h6 class="design_by s2">Designed by <strong>Beverly Dela Cruz</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="s2" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tshirt 2-->
+
+				<!--Tshirt 3-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tshirt/T-shirt 3.jpg" alt="Anime Girl" class="card-img-top s3" >
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 s3" >Design 3</h3>
+						<h6 class="design_by s3">Designed by <strong>Glenda Paña Mendoza</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="s3" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tshirt 3-->
+			</div>
+			<!--end of Column 1-->
+
+			<!--Column 2-->
+			<div class="card-columns">
+				<!--Tshirt 4-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tshirt/T-shirt 4.jpg" alt="Anime Girl" class="card-img-top s4">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 s4" >Design 4</h3>
+						<h6 class="design_by s4">Designed by <strong>James Tercenio</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="s4" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tshirt 4-->
+
+				<!--Tshirt 5-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tshirt/T-shirt 5.jpg" alt="Anime Girl" class="card-img-top s5">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 s5" >Design 5</h3>
+						<h6 class="design_by s5">Designed by <strong>John Riemyl Catubay</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="s5" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tshirt 5-->
+
+				<!--Tshirt 6-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tshirt/T-shirt 6.jpg" alt="Anime Girl" class="card-img-top s6">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 s6" >Design 6</h3>
+						<h6 class="design_by s6">Designed by <strong>Juliana Orpilla Santander</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="s6" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tshirt 6-->
+
+
+			</div>
+			<!--end of Column 2-->
+
+
+			<!--Column 3-->
+			<div class="card-columns">
+				<!--Tshirt 7-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tshirt/T-shirt 7.jpg" alt="Anime Girl" class="card-img-top s7">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 s7" >Design 7</h3>
+						<h6 class="design_by s7">Designed by <strong>Katrina Rose Iba-oc</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="s7" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tshirt 7-->
+
+				<!--Tshirt 8-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tshirt/T-shirt 8.jpg" alt="Anime Girl" class="card-img-top s8">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 s8" >Design 8</h3>
+						<h6 class="design_by s8">Designed by <strong>Leo Bustillo</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="s8" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tshirt 8-->
+
+				<!--Tshirt 9-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tshirt/T-shirt 9.jpg" alt="Anime Girl" class="card-img-top s9">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 s9" >Design 9</h3>
+						<h6 class="design_by s9">Designed by <strong>Milane Batan</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="s9" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tshirt 9-->
+
+
+			</div>
+			<!--end of Column 3-->
+
+			<!--Column 4-->
+			<div class="card-columns">
+				<!--Tshirt 10-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tshirt/T-shirt 10.jpg" alt="Anime Girl" class="card-img-top s10">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 s10" >Design 10</h3>
+						<h6 class="design_by s10">Designed by <strong>Katrina Rose Iba-oc</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="s10" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tshirt 10-->
+
+				<!--Tshirt 11-->
+				<div class="card bg-light m-* reveal fade-bottom">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tshirt/T-shirt 11.jpg" alt="Anime Girl" class="card-img-top s11">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 s11" >Design 11</h3>
+						<h6 class="design_by s11">Designed by <strong>Leo Bustillo</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="s11" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tshirt 11-->
+
+				<!--Tshirt 12-->
+				<div class="card bg-light m-* reveal fade-right">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tshirt/T-shirt 12.jpg" alt="Anime Girl" class="card-img-top s12">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 s12" >Design 12</h3>
+						<h6 class="design_by s12">Designed by <strong>Milane Batan</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="s12" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-fooer"></div>
+					-->
+					
+				</div>
+				<!--end of Tshirt 12-->
+
+
+			</div>
+			<!--end of Column 4-->
+
+			<div class="card-columns">
+				<!--Tshirt 13-->
+				<div class="card bg-light m-* reveal fade-left">
+					<!--
+					<div class="card-header"></div>
+					 -->
+					<img src="products/tshirt/T-shirt 13.jpg" alt="Anime Girl" class="card-img-top s13">
+					<div class="card-body card-img-overlay " >
+						<h3 class="card-title display-4 s13" >Design 13</h3>
+						<h6 class="design_by s13">Designed by <strong>Milane Batan</strong></h6>
+						<a href="#md" class="stretched-link text-white" id="s13" data-toggle="modal"></a>
+					</div>
+					<!-- 
+					<div class="card-footer"></div>
+					-->
+					
+				</div>
+				<!--end of Tshirt 13-->
+			</div>
+
+
+    </div>
+	</div>
+	<!--end of Shirt-->
+
+
+
+
+
+
+
+
+
+	<!--Modal that will show once clicked-->
+
+	<div class="modal fade" id="md">
+		<!--.modal-dialog-centered is added to make the modal center horizontally and vertically-->
+		<!--To make the modal scroll instead -->
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="title">Design # </h3>
+					<br>
+					
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<div class="modal-body text-center">
+
+					<h4 id="design_by">Designed by</h4>
+					<img src="" alt="Image" id="modal-img" class="img-fluid" style="width: 70%; height:auto; padding: 0 auto; border-radius:10%;">
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline-success">Add to Cart</button>
+					<button type="button" class="btn btn-outline-danger" data-dismiss="modal">close</button>
+				</div>
+
+			</div>
+			
+		</div>
+
+	</div>
+	<!--end of Modal that will show once clicked-->
+	
+	<!--Modal as Cart-->
+
+	<div class="modal fade" id="cart">
+		<!--.modal-dialog-centered is added to make the modal center horizontally and vertically-->
+		<!--To make the modal scroll instead -->
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="title">Designs Added</h3>
+					<br>
+					
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<div class="modal-body text-center">
+
+					<h4 id="design_by">Design # 1</h4>
+					<img src="img/an1.jpg" alt="Image" id="modal-img" class="img-fluid" style="width: 70%; height:auto; padding: 0 auto; border-radius:10%;">
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline-warning">Clean Cart</button>
+					<button type="button" class="btn btn-outline-success">Cash Out</button>
+					<button type="button" class="btn btn-outline-danger" data-dismiss="modal">close</button>
+				</div>
+
+			</div>
+			
+		</div>
+
+	</div>
+	<!--end of Modal as Cart-->
+
+
+
+
+
+
+
+
+
+
+
+	<!--Modal as Login-->
+
+	<div class="modal fade" id="login" >
+		<!--.modal-dialog-centered is added to make the modal center horizontally and vertically-->
+		<!--To make the modal scroll instead -->
+		<div class="modal-dialog modal-md modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title " style="color: aqua; font-weight: bold;" id="title">Login</h3>
+					<br>
+					
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<div class="modal-body text-center">
+						<!--type : text-->
+						<div class="form-group">
+							<label for="un" class="" style="color: aqua; font-weight: bold;">Email:</label>
+							<input style="background-color:rgba(255, 255, 255, 0.8); color: rgb(50, 71, 71);font-weight: bold;" type="email" class="form-control" name="un" id="un" placeholder="enter your email">
+						</div>
+		
+						<!--type : password-->
+						<div class="form-group">
+							<label for="un" class="" style="color: aqua; font-weight: bold;">Password:</label>
+							<input style="background-color:rgba(255, 255, 255, 0.8); color: rgb(50, 71, 71);font-weight: bold;" type="password" class="form-control" name="un" id="un" placeholder="enter your email">
+						</div>
+						<button type="submit" class="btn btn-outline-success">LOGIN</button>
+					
+				</div>
+
+				<div class="modal-footer">
+					
+					<button type="button" class="btn btn-outline-danger" data-dismiss="modal">close</button>
+				</div>
+
+			</div>
+			
+		</div>
+
+	</div>
+	<!--end of Modal as Login-->
+
+
+
+
+
+
+
+
+
+
+<!--end of the body-->
+
+<!--Start of the Footer-->
+
+<footer id="about" style="">
+	<div class="container-fluid pt-5 pb-5 " id="intro">
+		<div class="jumbotron">
+			<h1 class="display-3 page-header reveal fade-left"><span style="color: aqua;">Print</span>opia</h1>
+			<h4 class="p-5 text-justify reveal fade-bottom" style="color:rgb(248, 147, 14); font-weight:bold;">Our company offers premium quality and comfortable products in the market.
+				Breathable and comfortable with a premium feel, our collection
+				of 100% Polyester T – shirts come in a range of designs, colors and sizes
+				so we are certain you will find the perfect one for you. Ideal
+				for embroidery and print in particular, allowing you to add your
+				own personalization. We also offer quality Cup and Mug Printing,
+				Cap Printing, Pillows/Pillow Case Printing, and Tote Bag Printing.
+				
+				Our company’s products and services will assure you the best quality
+				
+				printing in the market with an affordable price.</h4>
+
+			
+
+			<h2 class="display-3 reveal fade-left">More <span style="color: aqua;">About</span> the Company</h2>
+			<div class="row">
+				<div class="col p-5 reveal fade-bottom">
+					<div class="jumbotron">
+						<h1 class="display-3 page-header reveal fade-left"><span style="color: rgb(255, 0, 200);">VIS</span>SION</h1>
+						<h4 class="p-5 text-justify reveal fade-bottom" style="color:rgb(248, 147, 14); font-weight:bold;">To become Nationwide's most recognized and trusted printing provider.</h4>
+					</div>
+					
+				</div>
+
+				<div class="col p-5 reveal fade-bottom">
+					<div class="jumbotron">
+						<h1 class="display-3 page-header reveal fade-left"><span style="color: rgb(255, 0, 200);">MIS</span>SION</h1>
+						<h4 class="p-5 text-justify reveal fade-bottom" style="color:rgb(248, 147, 14); font-weight:bold;">We deliver creative design prints that make our clients successful. We keep our
+							promises, provide creative solutions, and achieve our client’s goals.</h4>
+					</div>
+					
+				</div>
+				
+			</div>
+
+			<div class="row">
+				<div class="col p-5 reveal fade-left">
+					<div class="jumbotron ">
+						<h3 class="display-3 reveal fade-left" ><span style="color: aqua;">Printopia</span>  Goals</h3>
+
+						<ul class="list-group p-5 reveal fade-right" style="font-weight: bold; list-style-type: square; ">
+							<li class="list-item reveal fade-right"><h2 style="color: #da3ec0;">To <span style="color: aqua;">reduce cost</span> and <span style="color: aqua;">increase profit.</span></li>
+							
+							<li class="list-item reveal fade-right"><h2 style="color: #da3ec0;">To <span style="color: aqua;">gain experience.</span></li>
+							
+							<li class="list-item reveal fade-right"><h2 style="color: #da3ec0;">To <span style="color: aqua;">achieve customer satisfaction.</span></li>
+							
+						</ul>
+					</div>
+					
+				</div>
+
+				<div class="col p-5 reveal fade-left">
+					<div class="jumbotron ">
+						<h3 class="display-3 reveal fade-left" ><span style="color: aqua;">Printopia</span>  Objectives</h3>
+
+						<ul class="list-group p-5 reveal fade-right" style="font-weight: bold; list-style-type: square; ">
+							<li class="list-item reveal fade-right"><h2 style="color: #da3ec0;">To become<span style="color: aqua;">/stay profitable.</span></li>
+								
+							<li class="list-item reveal fade-right"><h2 style="color: #da3ec0;">To be <span style="color: aqua;">able to provide high quality products</span> at a <span style="color: aqua;"> very affordable price.</span></li>
+							
+						</ul>
+					</div>
+					
+				</div>
+			
+			</div>
+			<h3 class="reveal fade-bottom">To know more about our company, read our <a href="https://drive.google.com/file/d/1low-ptPN20afWckp1vAJ3k1t3K1JguVC/view?fbclid=IwAR2vcKKmhsTUXra66O8YMVvYUD2KDAfOSgSqZpjLMZls_-Z5D_8Zl1nW5Ns" target="_blank">Official Company Documentation</a></h3>
+
+		</div>
+
+	
+	<div class="jumbotron" style="background-color: rgba(53, 78, 78, 0.493); color:white; font-weight: bold;">
+		<h2 class="page-header display-3 reveal fade-left" >The Developers</h2>
+
+		<div class="row">
+			<div class="col p-4">
+				<!--Carousel-->    
+			
+
+				<div id="dev" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="hover" data-keyboard="true" data-wrap="true">
+					<!--Indicators-->
+					<!--.carousel-indicators adds indicators for the carousel-->
+					<!--These are the little dots at the bottom of each slide 
+						the little rectangles indicating how many slides are there and which slide is currently viewing
+					-->
+					<ul class="carousel-indicators">
+						<!--i think, the data-slide-to is used to control what is next in the automatic slide-->
+						<!--data-slide and data-slide-to attributes specifies which slide to go-->
+						<li data-target="#dev" data-slide-to="0" class="active"></li>
+						<li data-target="#dev" data-slide-to="1" class="active"></li>
+						<li data-target="#dev" data-slide-to="2" class="active"></li>
+					</ul>
+		
+					<!--Slideshow-->
+					<!--.carousel-inner Add slides to the carousel-->
+					<div class="carousel-inner" >
+		
+						<!--.carousel-item specifies the content of each slide -->
+						<!--to change the size of the carousel successively, change the style="hight:value;" of each wrapping content that have .carousel-item and remember to put the same height on each -->
+						<div class="carousel-item active" style="height: 500px;">
+							<img src="img/eunique.jpg" alt="ap1" style="opacity: 0.1;">
+		
+							<!--.carousel-caption is used to create a caption inside the slideshow-->
+							<div class="carousel-caption" >
+								<h1 class="reveal fade-bottom" style="font-weight: bold;  color:white;" >Eunique A. Javillo</h1>
+								<img class="reveal fade-bottom" src="img/eunique.jpg" alt="" width="300px" height="300px" style="border-radius:50%">
+								<p style="font-weight: bold;">Supervisor</p>
+							</div>
+		
+						</div>
+
+						<div class="carousel-item" style="height: 500px;">
+							<img src="img/beverly.jpg" alt="ap1" style="opacity: 0.1;">
+		
+							<!--.carousel-caption is used to create a caption inside the slideshow-->
+							<div class="carousel-caption" >
+								<h1 class="reveal fade-bottom" style="font-weight: bold;  color:white;" >Beverly Dela Cruz</h1>
+								<img class="reveal fade-bottom" src="img/beverly.jpg" alt="" width="300px" height="300px" style="border-radius:50%">
+								<p style="font-weight: bold;">Quality Control
+									Staff</p>
+							</div>
+		
+						</div>
+
+						<div class="carousel-item" style="height: 500px;">
+							<img src="img/Leonardo.jpg" alt="ap1" style="opacity: 0.1;">
+		
+							<!--.carousel-caption is used to create a caption inside the slideshow-->
+							<div class="carousel-caption" >
+								<h1 class="reveal fade-bottom" style="font-weight: bold;  color:white;" >Leonardo Bustillo</h1>
+								<img class="reveal fade-bottom" src="img/Leonardo.jpg" alt="" width="300px" height="300px" style="border-radius:50%">
+								<p style="font-weight: bold;">Import and
+									Export of
+									production</p>
+							</div>
+		
+						</div>
+
+						<div class="carousel-item" style="height: 500px;">
+							<img src="img/glenda.jpg" alt="ap1" style="opacity: 0.1;">
+		
+							<!--.carousel-caption is used to create a caption inside the slideshow-->
+							<div class="carousel-caption" >
+								<h1 class="reveal fade-bottom" style="font-weight: bold;  color:white;" >Glenda Mendoza</h1>
+								<img class="reveal fade-bottom" src="img/glenda.jpg" alt="" width="300px" height="300px" style="border-radius:50%">
+								<p style="font-weight: bold;">Graphic designer</p>
+							</div>
+		
+						</div>
+
+						<div class="carousel-item" style="height: 500px;">
+							<img src="img/juliana.jpg" alt="ap1" style="opacity: 0.1;">
+		
+							<!--.carousel-caption is used to create a caption inside the slideshow-->
+							<div class="carousel-caption" >
+								<h1 class="reveal fade-bottom" style="font-weight: bold;  color:white;" >Juliana Santander</h1>
+								<img class="reveal fade-bottom" src="img/juliana.jpg" alt="" width="300px" height="300px" style="border-radius:50%">
+								<p style="font-weight: bold;">Graphic designer</p>
+							</div>
+		
+						</div>
+						
+
+						<div class="carousel-item" style="height: 500px;">
+							<img src="img/katrina.jpg" alt="ap1" style="opacity: 0.1;">
+		
+							<!--.carousel-caption is used to create a caption inside the slideshow-->
+							<div class="carousel-caption" >
+								<h1 class="reveal fade-bottom" style="font-weight: bold;  color:white;" >Katrina Rose Iba-oc</h1>
+								<img class="reveal fade-bottom" src="img/katrina.jpg" alt="" width="300px" height="300px" style="border-radius:50%">
+								<p style="font-weight: bold;">Graphic designer</p>
+							</div>
+		
+						</div>
+
+						<div class="carousel-item" style="height: 500px;">
+							<img src="img/milane.jpg" alt="ap1" style="opacity: 0.1;">
+		
+							<!--.carousel-caption is used to create a caption inside the slideshow-->
+							<div class="carousel-caption" >
+								<h1 class="reveal fade-bottom" style="font-weight: bold;  color:white;" >Milane Batan</h1>
+								<img class="reveal fade-bottom" src="img/milane.jpg" alt="" width="300px" height="300px" style="border-radius:50%">
+								<p style="font-weight: bold;">Graphic designer</p>
+							</div>
+		
+						</div>
+
+						<div class="carousel-item" style="height: 500px;">
+							<img src="img/john.jpg" alt="ap1" style="opacity: 0.1;">
+		
+							<!--.carousel-caption is used to create a caption inside the slideshow-->
+							<div class="carousel-caption" >
+								<h1 class="reveal fade-bottom" style="font-weight: bold;  color:white;" >John Riemyl Catubay</h1>
+								<img class="reveal fade-bottom" src="img/john.jpg" alt="" width="300px" height="300px" style="border-radius:50%">
+								<p style="font-weight: bold;">Website
+									Administrators
+									and
+									Customer
+									Service
+									Relations</p>
+							</div>
+		
+						</div>
+
+
+						<div class="carousel-item" style="height: 500px;">
+							<img src="img/james.jpg" alt="ap1" style="opacity: 0.1;">
+		
+							<!--.carousel-caption is used to create a caption inside the slideshow-->
+							<div class="carousel-caption" >
+								<h1 class="reveal fade-bottom" style="font-weight: bold;  color:white;" >James Tercenio</h1>
+								<img class="reveal fade-bottom" src="img/james.jpg" alt="" width="300px" height="300px" style="border-radius:50%">
+								<p style="font-weight: bold;">Website
+									Administrators
+									and
+									Customer
+									Service
+									Relations</p>
+							</div>
+		
+						</div>
+
+						<div class="carousel-item" style="height: 500px;">
+							<img src="img/arthur.jpg" alt="ap1" style="opacity: 0.1;">
+		
+							<!--.carousel-caption is used to create a caption inside the slideshow-->
+							<div class="carousel-caption" >
+								<h1 class="reveal fade-bottom" style="font-weight: bold;  color:white;" >Arthur Cervania</h1>
+								<img class="reveal fade-bottom" src="img/arthur.jpg" alt="" width="300px" height="300px" style="border-radius:50%">
+								<p style="font-weight: bold;">Website
+									Administrators
+									and
+									Customer
+									Service
+									Relations</p>
+							</div>
+		
+						</div>
+
+					</div>
+		
+					<!--Left and Right controls-->
+					<!--.carousel-control-prev adds a left (previuos) button to the carousel which allows the user to go back between the slides-->
+					<a href="#dev" class="carousel-control-prev" data-slide="prev">
+						<!--.carousel-control-prev-icon is used inside .carousel-control-prev to show the prev icon-->
+						<span class="carousel-control-prev-icon"></span>
+					</a>
+		
+					<!--.carousel-control-prev adds a right (next) button to the carousel which allows the user to go back between the slides-->
+					<a href="#dev" class="carousel-control-next" data-slide="next">
+						<!--.carousel-control-next-icon is used inside .carousel-control-next to show next icon-->
+						<span class="carousel-control-next-icon"></span>
+					</a>
+				</div>
+				<!--End of Carousel-->
+		
+				</div>
+				<div class="col">
+					<h2>Leave your comments here:</h2>
+					<!--textarea-->
+					<div class="form-group">
+						<label for="ta">Comment: </label>
+						<textarea name="ta" id="ta" class="form-control" rows="5"></textarea>
+						<button type="button" class="btn btn-outline-success m-2" onclick="alert('Message Successfully Sent')">Send</button>
+					</div>
+					<div class="jumbotron">
+						<h4>You can also contact us at <a href="arthurcervania13@gmail.com">arthurcervania13@gmail.com</a></h4>
+					</div>
+			</div>
+		</div>
+
+	</div>
+
+		
+	</div>
+</footer>
+<!--End of the Footer-->
+
+
+
+
+	<!--Script for the modal-->
+	<script>
+		
+		/*to get the id of the element that fired the event*/
+		$(document).ready(function() {
+			var id;
+				$("a").click(function(event) {
+					
+					id = event.target.id;
+					
+					/*the card title container*/
+					var g = "card-title display-4 " + id;
+
+					/*the card supporting details */
+					var f = "design_by " + id;
+
+					//the card image
+					var im ="card-img-top " + id;
+
+					//title
+					//get the Element with that classname
+					var h = document.getElementsByClassName(g);
+					//and then get its value
+					var y = h[0].innerHTML;
+
+
+					//supporting information on the title
+					//get the Element with that classname
+					var h2 = document.getElementsByClassName(f);
+					//and then get its value
+					var x = h2[0].innerHTML;
+
+					
+					//img
+					var img = document.getElementsByClassName(im);
+					//and then get its value
+					var z = img[0].src;
+
+
+					/*display on the modal the data gathered*/
+					//title
+					document.getElementById("title").innerHTML = y;
+
+					//supporting detail
+					document.getElementById("design_by").innerHTML = " " +  x;
+
+					document.getElementById("modal-img").src = z;
+
+					
+				});
+
+				
+
+		});
+	</script>
+	
+
+	<!--End of the Script for the modal-->
+
+
+<!--on scroll effect-->
+<script>
+
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+window.addEventListener("scroll", reveal);
+
+// To check the scroll position on page load
+reveal();
+
+
+	function scrollefc(){
+		alert('onscroll working');
+	}
+
+	function myFunction() {
+		alert('onserach working');
+	}
+</script>
+<!--end of onscroll effect-->
+
+
+<!--scrollspy-->
+<!--install this script on your code to use smooth scroll-->
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+  //add smooth scroll to all a tags with the attribute ="#"
+	var scroll = new SmoothScroll('a[href*="#"]',{
+    //change the duration
+  speed:3000,
+  speedAsDuration:true
+  });
+</script>
+</body>
+</html>
